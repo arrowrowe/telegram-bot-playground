@@ -30,7 +30,7 @@ app.post('/api/v1/from-outgoing', (req, res) => {
       extra.message = message;
     } else {
       log.trace(messagePrefix, message);
-      extra = Object.create({});
+      extra = {message};
     }
     res.json(extra);
   };
