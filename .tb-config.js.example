@@ -1,0 +1,14 @@
+module.exports = {
+  server: {
+    port: 8080
+  },
+  hooks: {
+    'token-to-verify-the-hook-calling-this-app': {
+      disabled: false,
+      bot: {
+        token: '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11',
+        chatId: 'Set the chatId you want here!'
+      }
+    }
+  }
+};

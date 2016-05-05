@@ -1,3 +1,6 @@
+# Configurations
+/.tb-config.js
+
 # Logs
 logs
 *.log
