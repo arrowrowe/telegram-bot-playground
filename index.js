@@ -22,7 +22,7 @@ app.post('/api/v1/from-outgoing', (req, res) => {
   const body = req.body;
   const token = body.token;
   const hook = tbConfig.hooks[token];
-  const messagePrefix = `Token "$${token}"`;
+  const messagePrefix = `Token "${token}"`;
 
   const endWith = (message, extra) => {
     if (extra) {
