@@ -52,7 +52,7 @@ app.post('/api/v1/from-outgoing', (req, res) => {
       url: `https://api.telegram.org/bot${bot.token}/sendMessage`,
       form: {
         chat_id: bot.chatId,
-        text: body.text,
+        text: body.text.replace(/<(.+?)\|([^>\r\n]+?)>/, '[$1]($2)').replace(/<(.+?)>/g, '[$1]($1)'),
         parse_mode: 'Markdown',
         disable_web_page_preview: true,
         disable_notification: true
